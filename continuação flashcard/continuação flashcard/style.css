@@ -1,11 +1,11 @@
 :root{
-    --texto-principal: rgb(209, 222, 223);
-    --texto-pergunta: gray;
-    --texto-resposta: gray;
+    --texto-principal: rgb(0, 0, 0);
+    --texto-pergunta: rgba(7, 6, 6, 0.842);
+    --texto-resposta: rgb(0, 0, 0);
 }
 
 body {
-    background: url('plano\ de\ fundo.jpg');
+    background: url('plano\ de\ fundo\ 2.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
     font-family: Bai Jamjuree;
@@ -26,6 +26,8 @@ body {
     text-align: center;
     border: 1px solid var(--texto-principal);
     height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
 }
 
 .cartao__conteudo h3{
@@ -37,6 +39,18 @@ body {
     margin: 0.6rem;
     border-radius: 0.6rem;
     font-size: 1vw;
+}
+.cartao__conteudo__pergunta{
+    color: var(--texto-pergunta);
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 2em;
+}
+.cartao__conteudo__resposta{
+    color: var(--texto-resposta);
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 2em;
 }
 
 footer {
@@ -52,4 +66,9 @@ footer p {
     text-align: center;
     font-size: 0.6rem;
     margin-top: 0.5rem;
+}
+
+.cartao:hover .cartao__conteudo{
+    transform: rotateY(180deg);
+
 }
